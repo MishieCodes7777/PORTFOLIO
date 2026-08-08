@@ -1,0 +1,32 @@
+/* Native cursor is only hidden when the custom one is actually mounted. */
+body.has-custom-cursor,
+body.has-custom-cursor a,
+body.has-custom-cursor button {
+  cursor: none;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ink);
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  transition: width 0.25s ease, height 0.25s ease, background 0.25s ease,
+    opacity 0.2s ease;
+}
+
+.cursor.is-hovering {
+  width: 62px;
+  height: 62px;
+  background: #ffffff;
+  mix-blend-mode: difference;
+}
+
+.cursor.is-hidden {
+  opacity: 0;
+}

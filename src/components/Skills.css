@@ -1,0 +1,24 @@
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.skill-group {
+  height: 100%;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--ink);
+}
+
+.skill-group__name {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+}
+
+.skill-group .chips {
+  margin-top: 1rem;
+}

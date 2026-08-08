@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding: 2.5rem var(--gutter) 3.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer__name {
+  font-family: var(--display);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.footer__note,
+.footer__top {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.footer__top {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__top:hover {
+  color: var(--violet);
+}

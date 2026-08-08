@@ -1,16 +1,78 @@
-# React + Vite
+# Bhavya Kundalia — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Bhavya Kundalia, a B.Tech student and MERN stack
+developer. Built with React 19 and Vite.
 
-Currently, two official plugins are available:
+**Live site:** _add your deployed URL here_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Portfolio screenshot](./screenshot.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Fully responsive layout, mobile through desktop
+- Scroll-linked reading progress bar
+- Interactive spotlight portrait — hover reveals colour beneath greyscale
+- Scroll-triggered section reveals
+- Automatic light and dark theme following the system setting
+- Accessible: skip link, visible keyboard focus, semantic landmarks,
+  `prefers-reduced-motion` respected
+- SEO-ready: Open Graph and Twitter cards, JSON-LD `Person` structured data
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Layer     | Choice                       |
+| --------- | ---------------------------- |
+| Framework | React 19                     |
+| Build     | Vite 8                       |
+| Animation | Framer Motion                |
+| Styling   | Plain CSS with design tokens |
+
+## Running locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the URL Vite prints (usually `http://localhost:5173`).
+
+```bash
+npm run build     # production build into dist/
+npm run preview   # preview the production build
+npm run lint      # eslint
+```
+
+## Project structure
+
+```
+src/
+├── components/        one component + one stylesheet per section
+├── data/content.js    all copy lives here — edit this, not the components
+├── assets/            images
+├── index.css          design tokens, reset, shared styles
+├── App.jsx            composes the sections
+└── main.jsx           entry point
+```
+
+## Editing content
+
+Every piece of text on the site comes from `src/data/content.js`. To add a
+project, append an object to the `projects` array — nothing else needs to
+change.
+
+## Before deploying
+
+- [ ] Add your CV as `public/resume.pdf` (the download buttons point here)
+- [ ] Add a `screenshot.png` at the repo root for this README
+- [ ] Replace the placeholder URLs in `index.html` with your real domain
+- [ ] Fill in `repo` and `demo` links for each project in `content.js`
+
+## Deployment
+
+Push to GitHub, import the repo at [vercel.com](https://vercel.com), and accept
+the detected Vite settings. Every push to `main` redeploys automatically.
+
+## Licence
+
+Code is free to reference. Please don't reuse the personal content, photography
+or certificates.
