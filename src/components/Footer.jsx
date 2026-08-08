@@ -7,9 +7,6 @@ export default function Footer() {
       <p className="footer__name">
         {profile.firstName} {profile.lastName}
       </p>
-      <p className="footer__note">
-        Built with React and Vite. © {new Date().getFullYear()}
-      </p>
       <a className="footer__top" href="#top">
         Back to top <span aria-hidden="true">↑</span>
       </a>

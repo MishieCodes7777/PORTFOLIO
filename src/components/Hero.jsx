@@ -39,7 +39,11 @@ export default function Hero() {
             <a className="btn btn--solid" href="#projects">
               View my work
             </a>
-            <a className="btn btn--outline" href={profile.resume} download>
+            <a
+              className="btn btn--outline"
+              href={profile.resume}
+              download={profile.resumeFileName}
+            >
               Download resume
             </a>
           </div>
@@ -70,7 +74,6 @@ export default function Hero() {
               style={{ "--x": `${spot.x}px`, "--y": `${spot.y}px` }}
             />
           </div>
-          <p className="portrait__hint">Move your cursor across the photo</p>
         </motion.div>
 
         <motion.ul className="hero__socials" {...rise(0.38)}>

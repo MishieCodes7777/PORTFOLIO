@@ -23,6 +23,8 @@ export default function Projects() {
                   <span className="project__year">{project.year}</span>
                 </header>
 
+                {project.tag && <p className="project__tag">{project.tag}</p>}
+
                 <p className="project__desc">{project.description}</p>
 
                 <ul className="project__highlights">

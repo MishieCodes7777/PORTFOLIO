@@ -6,12 +6,15 @@
 export const profile = {
   firstName: "Bhavya",
   lastName: "Kundalia",
-  role: "MERN Stack Developer & DSA Enthusiast",
+  role: "Full-Stack Web Developer & DSA Enthusiast",
   status: "Available for internships & freelance work",
-  bio: "I'm a B.Tech student who builds full-stack web applications with the MERN stack. I care about interfaces that feel fast and obvious to use, and I back that up with consistent Data Structures and Algorithms practice — the kind of groundwork that shows up in how I approach a problem, not just how I ship it.",
+  bio: "I'm an Information Technology undergraduate at Manipal University Jaipur who builds full-stack web applications — real-time systems with WebRTC and Socket.IO, and data-driven apps on Node and Express. I've solved 150+ algorithmic problems on LeetCode, and that groundwork shows up in how I approach a problem, not just how I ship it.",
   email: "kundaliabhavya2@gmail.com",
-  // Put your CV at public/resume.pdf and this link works.
+  location: "Uttarakhand, India",
+  // Your CV lives at public/resume.pdf — overwrite that file to update it.
   resume: "/resume.pdf",
+  // The name the file gets when a visitor downloads it.
+  resumeFileName: "Bhavya-Kundalia-Resume.pdf",
 };
 
 export const socials = [
@@ -21,14 +24,24 @@ export const socials = [
     handle: "bhavya-k",
     url: "https://www.linkedin.com/in/bhavya-k-805485317/",
   },
-  { label: "LeetCode", handle: "MishB7183", url: "https://leetcode.com/u/MishB7183/" },
+  { label: "LeetCode", handle: "150+ solved", url: "https://leetcode.com/u/MishB7183/" },
+];
+
+// Shown in the Contact section. The full set of profiles lives in `socials`
+// and appears in the hero — this is deliberately the shorter list.
+export const contactLinks = [
+  {
+    label: "LinkedIn",
+    handle: "bhavya-k",
+    url: "https://www.linkedin.com/in/bhavya-k-805485317/",
+  },
 ];
 
 export const navLinks = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Certificates", href: "#certificates" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -53,7 +66,6 @@ export const experience = [
       description:
         "A full-stack MERN application for employee productivity monitoring and workforce management, covering activity logging, per-employee dashboards and role-based access for managers.",
       stack: ["MongoDB", "Express.js", "React", "Node.js"],
-      // Add these when the repo/demo is public.
       repo: "",
       demo: "",
     },
@@ -62,63 +74,99 @@ export const experience = [
 
 export const projects = [
   {
-    name: "WebRTC Video Conference App",
-    year: "2026",
+    name: "Akio — Food Ordering System",
+    year: "2026 — Present",
+    tag: "Team project · built the admin side",
     description:
-      "A real-time video conferencing platform supporting peer-to-peer audio and video calls, with a signalling server handling room join, offer/answer exchange and ICE candidate negotiation.",
+      "A full-stack food ordering platform with a customer storefront and a separate admin panel. I built the admin side end to end — backend and frontend — covering menu and category management, the order status pipeline, table management and the analytics dashboard.",
     highlights: [
-      "Peer-to-peer media streaming over WebRTC",
-      "Room-based signalling with live participant sync",
-      "Mute, camera toggle and graceful disconnect handling",
+      "Admin CRUD for menu items, categories and restaurant tables",
+      "Order status flow from pending through to completed, with Razorpay refunds on cancellation",
+      "Analytics dashboard: revenue trends, popular items and payment breakdown charts",
+      "Role-based admin authentication with JWT and Cloudinary image uploads",
     ],
-    stack: ["WebRTC", "JavaScript", "Node.js", "Socket.io"],
-    repo: "https://github.com/MishieCodes7777",
-    demo: "",
+    stack: ["React 19", "Node.js", "Express 5", "PostgreSQL", "Tailwind CSS", "JWT", "Razorpay"],
+    repo: "https://github.com/MishieCodes7777/Food-ordering-system",
+    demo: "https://campus-flow-kohl.vercel.app",
   },
   {
-    name: "E-Commerce Platform",
-    year: "2025",
+    name: "WebRTC Video Conferencing App",
+    year: "2025 — Present",
+    tag: "Individual project",
     description:
-      "A dynamic e-commerce storefront with product catalogue, cart management and order flow, backed by a server-rendered PHP application and a relational schema.",
+      "A real-time video conferencing application supporting peer-to-peer audio and video, with meeting creation and joining via unique room IDs and URL-based routing.",
     highlights: [
-      "Product catalogue with search and category filtering",
-      "Session-based cart and checkout flow",
-      "Admin views for product and order management",
+      "Peer-to-peer media streaming over WebRTC",
+      "Unique room IDs with URL-based join routing",
+      "Real-time connection and disconnect handling",
     ],
-    stack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    stack: ["WebRTC", "JavaScript", "Node.js", "Socket.IO"],
     repo: "https://github.com/MishieCodes7777",
     demo: "",
   },
 ];
 
 export const skills = [
-  { group: "Languages", items: ["C++", "JavaScript", "Java", "Python"] },
-  { group: "Frontend", items: ["React", "HTML", "CSS", "Responsive Design"] },
-  { group: "Backend", items: ["Node.js", "Express.js", "REST APIs"] },
-  { group: "Databases", items: ["MongoDB", "MySQL"] },
-  { group: "Core CS", items: ["Data Structures", "Algorithms", "OOP"] },
-  { group: "Tools", items: ["Git", "GitHub", "Vite", "Postman"] },
+  { group: "Languages", items: ["C++", "C", "Java", "Python", "JavaScript", "PHP", "SQL"] },
+  {
+    group: "Frontend",
+    items: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"],
+  },
+  { group: "Backend", items: ["Node.js", "Express.js", "REST APIs", "JWT / OAuth"] },
+  { group: "Real-time & 3D", items: ["WebRTC", "Socket.IO", "Three.js"] },
+  { group: "Databases", items: ["PostgreSQL"] },
+  {
+    group: "Core CS",
+    items: [
+      "Data Structures",
+      "Algorithms",
+      "OOP",
+      "Operating Systems (OS)",
+      "RDBMS",
+      "DBMS",
+      "Computer Networks",
+    ],
+  },
+  { group: "Tools", items: ["Git", "GitHub", "Vite", "npm", "VS Code"] },
+];
+
+export const education = [
+  {
+    qualification: "B.Tech, Information Technology",
+    institution: "Manipal University Jaipur",
+    period: "2024 — 2028",
+  },
+  {
+    qualification: "Class 12 (CBSE)",
+    institution: "Baluni Public School",
+    period: "2024",
+  },
+  {
+    qualification: "Class 10 (ICSE)",
+    institution: "Wynberg-Allen School",
+    period: "2022",
+  },
 ];
 
 export const certificates = [
   {
     title: "Data Structures & Algorithms using Java",
-    issuer: "NPTEL",
+    issuer: "NPTEL · IIT Kharagpur",
     image: "dsaNPTEL",
     width: 1000,
     height: 678,
     alt: "NPTEL certificate for Data Structures and Algorithms using Java",
     description:
-      "Completed NPTEL's 12-week Data Structures and Algorithms using Java course, finishing among 3,234 successful candidates. Covered core data structures, algorithm design and complexity analysis.",
+      "Completed a 12-week NPTEL certification in Java-based data structures and algorithms, clearing both the online assessments and the proctored examination under IIT Kharagpur's evaluation.",
   },
   {
     title: "Python for Data Science",
-    issuer: "NPTEL",
+    issuer: "NPTEL · IIT Madras",
     image: "python",
     width: 953,
     height: 679,
     alt: "NPTEL Elite grade certificate for Python for Data Science",
     description:
-      "Earned an Elite grade in NPTEL's Python for Data Science course, building fundamentals in Python programming, data handling and analysis workflows.",
+      "Earned Elite certification with a 70% consolidated score, clearing both the online assignments and the proctored examination. Covered Python programming and foundational data science techniques.",
   },
 ];

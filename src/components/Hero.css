@@ -84,31 +84,29 @@
 
 .portrait__base {
   filter: grayscale(100%) contrast(1.05);
+  transition: filter 0.4s ease;
+}
+
+/* the whole photo warms up slightly on hover, so the spotlight has context */
+.portrait:hover .portrait__base {
+  filter: grayscale(65%) contrast(1.05);
 }
 
 .portrait__reveal {
   /* soft-edged spotlight instead of a hard circle */
   -webkit-mask-image: radial-gradient(
-    circle 105px at var(--x) var(--y),
-    #000 55%,
+    circle 190px at var(--x) var(--y),
+    #000 62%,
     transparent 100%
   );
   mask-image: radial-gradient(
-    circle 105px at var(--x) var(--y),
-    #000 55%,
+    circle 190px at var(--x) var(--y),
+    #000 62%,
     transparent 100%
   );
+  /* push the revealed area past normal colour so the effect actually reads */
+  filter: saturate(1.35) contrast(1.06);
   pointer-events: none;
-}
-
-.portrait__hint {
-  margin-top: 0.9rem;
-  text-align: center;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
 }
 
 /* ---------- Socials ---------- */

@@ -1,4 +1,4 @@
-import { profile, socials } from "../data/content";
+import { profile, contactLinks } from "../data/content";
 import SectionHead from "./SectionHead";
 import Reveal from "./Reveal";
 import "./Contact.css";
@@ -22,7 +22,7 @@ export default function Contact() {
 
         <Reveal delay={0.1}>
           <ul className="contact__links">
-            {socials.map((s) => (
+            {contactLinks.map((s) => (
               <li key={s.label}>
                 <a
                   className="contact__link"

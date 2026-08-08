@@ -210,6 +210,25 @@ h4 {
 }
 
 /* ============================================================
+   Cards (shared by projects and certifications)
+   ============================================================ */
+.card {
+  height: 100%;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card--hover:hover {
+  transform: translateY(-6px);
+  border-color: var(--violet);
+  box-shadow: var(--shadow);
+}
+
+/* ============================================================
    Buttons
    ============================================================ */
 .btn {

@@ -3,7 +3,7 @@
 Personal portfolio site for Bhavya Kundalia, a B.Tech student and MERN stack
 developer. Built with React 19 and Vite.
 
-**Live site:** _add your deployed URL here_
+**Live site:** https://portfolio-rho-tan-51.vercel.app
 
 ![Portfolio screenshot](./screenshot.png)
 
@@ -62,9 +62,7 @@ change.
 
 ## Before deploying
 
-- [ ] Add your CV as `public/resume.pdf` (the download buttons point here)
 - [ ] Add a `screenshot.png` at the repo root for this README
-- [ ] Replace the placeholder URLs in `index.html` with your real domain
 - [ ] Fill in `repo` and `demo` links for each project in `content.js`
 
 ## Deployment

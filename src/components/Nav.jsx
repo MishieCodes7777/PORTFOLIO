@@ -49,7 +49,7 @@ export default function Nav() {
         <a
           className="btn btn--outline nav__resume"
           href={profile.resume}
-          download
+          download={profile.resumeFileName}
           onClick={() => setOpen(false)}
         >
           Download resume

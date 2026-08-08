@@ -1,0 +1,98 @@
+.edu {
+  display: grid;
+  gap: 0;
+  margin-bottom: clamp(3rem, 7vw, 4.5rem);
+}
+
+.edu__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.edu li:first-child .edu__row {
+  border-top: 1px solid var(--line);
+}
+
+.edu__qual {
+  font-size: var(--step-1);
+  letter-spacing: -0.02em;
+}
+
+.edu__inst {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+.edu__period {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  color: var(--violet);
+  white-space: nowrap;
+}
+
+.edu__subhead {
+  font-size: var(--step-2);
+  letter-spacing: -0.025em;
+  margin-bottom: 1.75rem;
+  scroll-margin-top: 6rem;
+}
+
+@media (max-width: 560px) {
+  .edu__row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* ---------- Certification cards ---------- */
+.certs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.cert {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
+  border-bottom: 1px solid var(--line);
+}
+
+.cert__body {
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.cert__issuer {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--violet);
+  margin-bottom: 0.5rem;
+}
+
+.cert__title {
+  font-size: var(--step-1);
+  letter-spacing: -0.02em;
+}
+
+.cert__desc {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: var(--step--1);
+}

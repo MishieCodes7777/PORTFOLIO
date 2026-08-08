@@ -23,7 +23,8 @@
 
 .contact__links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 320px));
+  justify-content: start;
   gap: 1rem;
   margin-top: clamp(2.5rem, 6vw, 4rem);
 }
