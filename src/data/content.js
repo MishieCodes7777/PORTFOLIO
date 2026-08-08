@@ -124,7 +124,7 @@ export const skills = [
       "Operating Systems (OS)",
       "RDBMS",
       "DBMS",
-      "Computer Networks",
+
     ],
   },
   { group: "Tools", items: ["Git", "GitHub", "Vite", "npm", "VS Code"] },
