@@ -87,7 +87,7 @@ export const projects = [
     ],
     stack: ["React 19", "Node.js", "Express 5", "PostgreSQL", "Tailwind CSS", "JWT", "Razorpay"],
     repo: "https://github.com/MishieCodes7777/Food-ordering-system",
-    demo: "https://campus-flow-kohl.vercel.app",
+    demo: ""
   },
   {
     name: "WebRTC Video Conferencing App",
